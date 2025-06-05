@@ -1,101 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<title>a button</title>
-<style>
-    .button {
-      position: relative;
-      background-color: #bababa; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 30px;
-      border: 3px solid rgb(224, 224, 224);
-      border-radius: 50px;
-      
-      
-      }
-    .div{
-        
-    
-    width:60px;height:60px; 
-
-    border-radius:999em;
-
-    background:rgb(255, 255, 255);
-    position: absolute;
-    top: 2px;
-    right : 2px; 
-    animation: move 1s ;
-    animation-iteration-count:1
-    
-
-    
-
-    }
-    .body {
-    background: yellow;
-   }
-    
-    
-    
-.square {
-    width: 100px;
-    height: 100px;
-    background: blue;
-    display: block;
-    transition-property: width; /*元素要改變的width屬性*/
-    transition-duration: 2s; /*動畫持續時間為2秒*/
-    transition-timing-function: ease; /*動畫速度曲線為急加速後減速*/
-    transition-delay: .5s; /*延後0.5秒才開始動畫*/
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Voice Platformer</title>
+  <link rel="stylesheet" href="thecss.css">
 </head>
 <body>
-
-
-
-
-<center>
-    <div class="button" >
-    <span >---</span>
-    <button class="div"  > </button>
-    </div>
-</center>
-<script>
-    var count = 0;
-    var div = document.querySelector('.div');
-    var body = document.querySelector('.body');
-    
-    document.querySelector('button').addEventListener('click',function(){
-      if(count/2 == 0){
-        count =1;
-        div.style.right = "5px" ;
-        setTimeout(function() {div.style.right = "10px" ;}, 50);
-        setTimeout(function() {div.style.right = "20px" ;}, 20);
-        setTimeout(function() {div.style.right = "25px" ;}, 20);
-        div.style.backgroundColor = "gray";
-        
-        
-        setTimeout(function() {div.style.right = "32px" ;}, 50);
-      }
-      else {
-        div.style.right = "32px" ;
-        setTimeout(function() {div.style.right = "32px" ;}, 50);
-        setTimeout(function() {div.style.right = "25px" ;}, 20);
-        setTimeout(function() {div.style.right = "20px" ;}, 20);
-        div.style.backgroundColor = "white";
-        setTimeout(function() {div.style.right = "5px" ;}, 50);
-        count =0;
-      
-    }
-    })
-    
-</script>
-
-
+  <div class="instructions">使用語音指令：左、右、跳、停</div>
+  <canvas id="game"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>

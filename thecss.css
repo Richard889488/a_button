@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+}
+
+canvas {
+  background: #4c9be8;
+  border: 2px solid #fff;
+}
+
+.instructions {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
